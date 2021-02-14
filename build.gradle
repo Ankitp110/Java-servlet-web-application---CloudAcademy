@@ -35,7 +35,7 @@ dependencies {
     compile group: 'com.github.docker-java', name: 'docker-java', version: '3.2.1'
 
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1' 
-    testimplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 
     runtime 'org.apache.logging.log4j:log4j-core:2.10.0'
     runtime 'com.fasterxml.jackson.core:jackson-databind:2.9.3'
