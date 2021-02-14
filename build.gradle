@@ -14,10 +14,9 @@ java {
 
 // =======================================
 
-//compileJava 
-        compileimplementation     {
+/* compileJava {
     options.compilerArgs += '-proc:none'
-}
+} */
 
 // =======================================
 
