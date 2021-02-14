@@ -15,8 +15,8 @@ java {
 // =======================================
 
   compileJava {
-    options.compilerArgs += '-proc:none'
-}  
+    //options.compilerArgs += '-proc:none'
+}  sourceCompatibility = JavaVersion.VERSION_1_8
 
 // =======================================
 
