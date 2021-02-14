@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                    sh 'ls -la'
-                   sh 'gradle --stacktrace build' //Running our first build
+                   sh 'gradle --stacktrace --warning-mode all build' //Running our first build
                 }
                 
             }
