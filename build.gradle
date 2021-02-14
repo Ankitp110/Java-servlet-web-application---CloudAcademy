@@ -1,5 +1,5 @@
 allprojects {
-    apply plugin: 'java'
+    apply plugin: 'java-library'
     apply plugin: 'war'
 
     group = 'org.cloudacademy.example.webapp'
@@ -14,7 +14,7 @@ java {
 
 // =======================================
 
-compileJava {
+implementationJava {
     options.compilerArgs += '-proc:none'
 } 
 
