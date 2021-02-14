@@ -12,7 +12,7 @@ pipeline {
         stage('build') {
             
                tools {
-               gradle 'gradle4.6'
+               gradle 'gradle7'
               }      
 
             steps {
@@ -49,7 +49,7 @@ pipeline {
         stage ('Exec Gradle') {
             steps {
                 rtGradleRun (
-                    tool: "gradle4.6", // Tool name from Jenkins configuration
+                    tool: "gradle7", // Tool name from Jenkins configuration
                     rootDir: "https://github.com/Ankitp110/GradleProject-TETRANOODLE.git",
                     buildFile: 'build.gradle',
                     tasks: 'clean artifactoryPublish',
