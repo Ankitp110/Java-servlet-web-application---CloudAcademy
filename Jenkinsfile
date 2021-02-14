@@ -12,7 +12,7 @@ pipeline {
         stage('build') {
             
                tools {
-               gradle 'gradle6.8.2'
+               gradle 'gradle4.6'
               }      
 
             steps {
