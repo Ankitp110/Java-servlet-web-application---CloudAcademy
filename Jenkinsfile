@@ -50,7 +50,7 @@ pipeline {
             steps {
                 rtGradleRun (
                     tool: "gradle6.8.2", // Tool name from Jenkins configuration
-                    rootDir: "https://github.com//Ankitp110//GradleProject-TETRANOODLE//blob//master//",
+                    rootDir: "https://github.com/Ankitp110/Java-servlet-web-application---CloudAcademy",
                     buildFile: 'build.gradle',
                     tasks: 'clean artifactoryPublish',
                     deployerId: "GRADLE_DEPLOYER",
