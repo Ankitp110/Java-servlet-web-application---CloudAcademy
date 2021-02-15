@@ -57,7 +57,7 @@ pipeline {
                     rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
                     buildFile: 'build.gradle',
                     tasks: 'clean build', //artifactoryPublish
-                    tasks: 'artifactoryPublish',
+                    tasks: 'clean artifactoryPublish',
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
