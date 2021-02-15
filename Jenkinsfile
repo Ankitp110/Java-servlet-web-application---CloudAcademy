@@ -59,6 +59,7 @@ pipeline {
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
+                sh 'ls -la'
             }
         }
         
