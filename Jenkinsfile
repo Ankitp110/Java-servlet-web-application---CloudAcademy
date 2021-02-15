@@ -65,8 +65,10 @@ pipeline {
         }
 
         stage ('Gradle Publish') {
+            steps {
         buildInfo = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'artifactoryPublish'
-    }
+           }
+        }
         
         stage ('Publish build info') {
             steps {
