@@ -1,6 +1,7 @@
 allprojects {
     apply plugin: 'java-library'
     apply plugin: 'war'
+    apply plugin: 'artifactory'
 
     group = 'org.cloudacademy.example.webapp'
     version = '1.0'
