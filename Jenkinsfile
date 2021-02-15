@@ -50,7 +50,7 @@ pipeline {
             steps {
                 rtGradleRun (
                     tool: "gradle6.8.2", // Tool name from Jenkins configuration
-                    rootDir: "Ankitp110/GradleProject-TETRANOODLE/",
+                    rootDir: "https://github.com//Ankitp110//GradleProject-TETRANOODLE.git//build.gradle",
                     buildFile: 'build.gradle',
                     tasks: 'clean artifactoryPublish',
                     deployerId: "GRADLE_DEPLOYER",
