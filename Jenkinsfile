@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage('build') {
+        /* stage('build') {
             
                tools {
                gradle 'gradle6.8.2'
@@ -24,7 +24,7 @@ pipeline {
                 }
                 
             }
-        }
+        } */
 
         stage ('Artifactory configuration') {
             steps {
@@ -57,7 +57,6 @@ pipeline {
                     rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
                     buildFile: 'build.gradle',
                     tasks: 'clean build', //artifactoryPublish
-                    tasks: 'clean artifactoryPublish',
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
