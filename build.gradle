@@ -34,13 +34,14 @@ repositories {
 dependencies {
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.10.0'
     implementation group: 'com.github.docker-java', name: 'docker-java', version: '3.2.1'
-
+     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release" 
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1' 
     testImplementation 'junit:junit:4.12'
 
     runtimeOnly 'org.apache.logging.log4j:log4j-core:2.10.0'
     runtimeOnly 'com.fasterxml.jackson.core:jackson-databind:2.9.3'
     runtimeOnly 'com.github.docker-java:docker-java:3.2.1'
+   
 }
 
 /* artifactory {
