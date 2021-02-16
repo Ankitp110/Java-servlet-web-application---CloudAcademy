@@ -29,13 +29,6 @@ buildscript {
 
 repositories {
     jcenter()
-    maven {
-        +url "http://159.65.145.173:8081/artifactory" // The Artifactory (preferably virtual) repository to resolve from
-        credentials {               // Optional resolver credentials (leave out to use anonymous resolution)
-            username = "admin" // Artifactory user name
-            password = "Panju@12345" // Password or API Key
-        }
-    }
 }
 
 dependencies {
