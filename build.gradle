@@ -1,7 +1,8 @@
 allprojects {
     apply plugin: 'java-library'
     apply plugin: 'war'
-    apply plugin: "com.jfrog.artifactory"
+    //apply plugin: "com.jfrog.artifactory"
+    apply plugin: 'artifactory-publish'
     
 
     //group = 'org.cloudacademy.example.webapp'
