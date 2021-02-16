@@ -31,7 +31,7 @@ pipeline {
                 rtServer (
                     id: "ARTIFACTORY_SERVER",
                     url: "http://159.65.145.173:8081/artifactory",
-                    credentialsId: 'admin.jfrog'
+                    credentialsId: 'bf4d6d00-015e-40de-8307-f50fd328760c'
                 )
 
                 rtGradleDeployer (
