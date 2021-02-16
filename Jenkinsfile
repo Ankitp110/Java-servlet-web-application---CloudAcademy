@@ -51,6 +51,7 @@ pipeline {
         stage ('Config Build Info') {
             steps {
                 rtBuildInfo (
+                    tasks: 'clean build',
                     captureEnv: true,
                     includeEnvPatterns: ["*"],
                     excludeEnvPatterns: ["DONT_COLLECT*"]
