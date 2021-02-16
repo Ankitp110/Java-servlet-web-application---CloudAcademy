@@ -47,6 +47,18 @@ pipeline {
                 )
             }
         }
+        
+        stage ('Config Build Info') {
+            steps {
+                rtBuildInfo (
+                    captureEnv: true,
+                    includeEnvPatterns: ["*"],
+                    excludeEnvPatterns: ["DONT_COLLECT*"]
+                )
+            }
+        }
+
+
 
         stage ('Exec Gradle') {
             steps {
@@ -56,7 +68,7 @@ pipeline {
                     //rootDir: new URL('https://github.com/Ankitp110/Java-servlet-web-application---CloudAcademy/blob/master/build.gradle').file,
                     rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
                     buildFile: 'build.gradle',
-                    tasks: 'clean build', //artifactoryPublish
+                    tasks: 'clean artifactoryPublish', //build
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )

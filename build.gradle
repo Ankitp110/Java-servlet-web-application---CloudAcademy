@@ -43,7 +43,7 @@ dependencies {
     runtimeOnly 'com.github.docker-java:docker-java:3.2.1'
 }
 
-artifactory {
+/* artifactory {
     contextUrl = 'http://159.65.145.173:8081/artifactory'
     publish {
         repository {
@@ -66,4 +66,4 @@ artifactory {
     resolve {
         repoKey = 'jcenter'
     }
-}
+} */
