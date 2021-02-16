@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                    sh 'ls -la'
-                   sh 'gradle build' //Running our first build
+                   sh 'gradle clean build' //Running our first build
                 }
                 
             }
