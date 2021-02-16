@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        /* stage('build') {
+        stage('build') {
             
                tools {
                gradle 'gradle6.8.2'
@@ -20,11 +20,11 @@ pipeline {
             steps {
                 script {
                    sh 'ls -la'
-                   sh 'gradle --stacktrace --warning-mode all build' //Running our first build
+                   sh 'gradle build' //Running our first build
                 }
                 
             }
-        } */
+        } 
 
         stage ('Artifactory configuration') {
             steps {
@@ -48,16 +48,15 @@ pipeline {
             }
         }
         
-        stage ('Config Build Info') {
+        /* stage ('Config Build Info') {
             steps {
                 rtBuildInfo (
-                    //tasks: 'clean build',
                     captureEnv: true,
                     includeEnvPatterns: ["*"],
                     excludeEnvPatterns: ["DONT_COLLECT*"]
                 )
             }
-        } 
+        }  */
 
         stage ('Exec Gradle') {
             steps {
