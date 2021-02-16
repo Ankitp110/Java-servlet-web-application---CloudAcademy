@@ -58,21 +58,7 @@ pipeline {
             }
         }  */
 
-        stage ('Gradle build') {
-            steps {
-                sh 'pwd'
-                rtGradleRun (
-                    tool: "gradle6.8.2", // Tool name from Jenkins configuration
-                    //rootDir: new URL('https://github.com/Ankitp110/Java-servlet-web-application---CloudAcademy/blob/master/build.gradle').file,
-                    rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
-                    buildFile: 'build.gradle',
-                    tasks: 'clean --stacktrace build', // artifactoryPublish
-                    deployerId: "GRADLE_DEPLOYER",
-                    resolverId: "GRADLE_RESOLVER"
-                )
-                sh 'ls -la'
-            }
-        }
+        
 
         stage ('Gradle publish') {
             steps {
