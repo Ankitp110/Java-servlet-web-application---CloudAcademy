@@ -73,8 +73,7 @@ pipeline {
                     resolverId: "GRADLE_RESOLVER"
                 )
                 sh 'ls -la'
-                sh 'curl -u admin:Panju@12345 -X PUT "http://159.65.145.173:8081/artifactory/my-repository/my/new/artifact/directory" -T
-                    /var/jenkins_home/workspace/PipeLine_Cloudacapro/build/libs'
+                sh 'curl -u admin:Panju@12345 -X PUT "http://159.65.145.173:8081/artifactory" -T /var/jenkins_home/workspace/PipeLine_Cloudacapro/build/libs'
             }
         }
         
