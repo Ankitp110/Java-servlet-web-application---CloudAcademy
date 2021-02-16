@@ -68,7 +68,7 @@ pipeline {
                     //rootDir: new URL('https://github.com/Ankitp110/Java-servlet-web-application---CloudAcademy/blob/master/build.gradle').file,
                     rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
                     buildFile: 'build.gradle',
-                    tasks: 'clean --stacktrace artifactoryPublish', // build
+                    tasks: 'clean --scan artifactoryPublish', // build
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
