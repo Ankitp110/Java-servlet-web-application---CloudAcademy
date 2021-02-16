@@ -68,11 +68,13 @@ pipeline {
                     //rootDir: new URL('https://github.com/Ankitp110/Java-servlet-web-application---CloudAcademy/blob/master/build.gradle').file,
                     rootDir: '/var/jenkins_home/workspace/PipeLine_Cloudacapro',
                     buildFile: 'build.gradle',
-                    tasks: 'clean --scan artifactoryPublish', // build
+                    tasks: 'clean --scan build ', //  artifactoryPublish
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
                 sh 'ls -la'
+                sh 'curl -u admin:Panju@12345 -X PUT "http://159.65.145.173:8081/artifactory/my-repository/my/new/artifact/directory/.war" -T
+                    /var/jenkins_home/workspace/PipeLine_Cloudacapro/build/libs'
             }
         }
         
