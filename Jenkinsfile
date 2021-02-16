@@ -48,16 +48,16 @@ pipeline {
             }
         }
         
-        /* stage ('Config Build Info') {
+        stage ('Config Build Info') {
             steps {
                 rtBuildInfo (
-                    tasks: 'clean build',
+                    //tasks: 'clean build',
                     captureEnv: true,
                     includeEnvPatterns: ["*"],
                     excludeEnvPatterns: ["DONT_COLLECT*"]
                 )
             }
-        } */
+        } 
 
         stage ('Exec Gradle') {
             steps {
