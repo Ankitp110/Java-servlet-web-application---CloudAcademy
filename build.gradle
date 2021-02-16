@@ -3,7 +3,7 @@ allprojects {
     apply plugin: 'war'
     
 
-    group = 'org.cloudacademy.example.webapp'
+    //group = 'org.cloudacademy.example.webapp'
     version = '1.0'
     status = 'integration'
 }
